@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  @apply bg-gray-100;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.page {
+  @apply bg-white mx-auto my-0 w-full overflow-x-hidden shadow-xl;
+  max-width: 1440px;
+}
+
+.screenshot {
+  position: relative;
+}
+
+.screenshot img {
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.screenshot:before {
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  right: -50%;
+  top: -5%;
+  background: url(/static/images/hero-gradient.jpg) no-repeat center center / cover;
+  content: '';
+  border-radius: 5px;
+  z-index: 0;
+}

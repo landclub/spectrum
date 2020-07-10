@@ -1,0 +1,28 @@
+.button {
+  cursor: pointer;
+  @apply rounded font-semibold rounded;
+}
+
+.variant-primary {
+  @apply bg-indigo-600 text-white border border-indigo-700;
+}
+
+.variant-ghost {
+  @apply bg-transparent py-2 px-4 border border-gray-300
+}
+
+.variant-ghost:hover {
+  @apply bg-gray-200 text-black border-transparent
+}
+
+.size-small {
+  @apply py-3 px-8;
+}
+
+.size-medium {
+  @apply py-3 px-8;
+}
+
+.fullWidth {
+  @apply w-full;
+}

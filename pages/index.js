@@ -1,209 +1,186 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import {motion} from 'framer-motion';
+
+import Layout from '../components/layout';
+import PricingTable from '../components/pricing-table';
+import Button from '../components/button';
+
+const FAQS = [
+  {
+    question: 'Neque porro quisquam est qui dolorem ipsum?',
+    answer:
+      'Nulla facilisi. Donec blandit id odio a posuere. Morbi blandit risus a nisl semper commodo. Mauris condimentum turpis vel volutpat vestibulum. Nulla tempor ut ligula eu fermentum.',
+  },
+  {
+    question: 'Suspendisse tincidunt velit eros, et ultricies?',
+    answer:
+      'Nulla facilisi. Donec blandit id odio a posuere. Morbi blandit risus a nisl semper commodo. Mauris condimentum turpis vel volutpat vestibulum. Nulla tempor ut ligula eu fermentum.',
+  },
+  {
+    question: 'Phasellus arcu nisi, placerat et nibh non, blandit luctus nisi?',
+    answer:
+      'Nulla facilisi. Donec blandit id odio a posuere. Morbi blandit risus a nisl semper commodo. Mauris condimentum turpis vel volutpat vestibulum. Nulla tempor ut ligula eu fermentum.',
+  },
+];
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
+      <motion.section
+        className="py-12"
+        initial="initial"
+        animate="enter"
+        exit="exit"
+      >
+        <div className="container">
+          <div className="flex py-14 px-6 justify-center text-left md:text-center">
+            <div className="w-12/12 md:w-8/12">
+              <motion.div
+                variants={{
+                  initial: {y: 30, opacity: 0},
+                  enter: {
+                    y: 0,
+                    opacity: 1,
+                    transition: {duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96]},
+                  },
+                }}
+              >
+                <h1 className="text-4xl md:text-5xl font-bold">
+                  Landing pages. Made simple.
+                </h1>
+                <p className="text-xl text-gray-700">
+                  A beautifully designed next.js template for your next project
+                </p>
+                <Button className="mt-5">Get started</Button>
+              </motion.div>
+            </div>
+          </div>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className="flex py-14 justify-center">
+            <div className="w-9/12">
+              <motion.div
+                className="screenshot"
+                variants={{
+                  initial: {
+                    x: 100,
+                  },
+                  enter: {
+                    x: 0,
+                    transition: {duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96]},
+                  },
+                }}
+              >
+                <img src="/static/images/preview.png" />
+              </motion.div>
+            </div>
+          </div>
         </div>
-      </main>
+      </motion.section>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+      <section className="py-8">
+        <div className="container">
+          <div className="flex justify-center text-center mb-5">
+            <h2 className="">Trusted by these great companies</h2>
+          </div>
+          <div className="flex justify-center">
+            <div className="w-10/12 flex justify-between">
+              <img
+                src="/static/images/logo-airfrance.svg"
+                width="120"
+                alt="Aifrance"
+              />
+              <img
+                src="/static/images/logo-braintree.svg"
+                width="120"
+                alt="Braintree"
+              />
+              <img
+                src="/static/images/logo-converse.svg"
+                width="120"
+                alt="Converse"
+              />
+              <img
+                src="/static/images/logo-google.svg"
+                width="120"
+                alt="Google"
+              />
+              <img
+                src="/static/images/logo-vimeo.svg"
+                width="120"
+                alt="Vimeo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+      <section className="py-14">
+        <div className="container">
+          <div class="flex flex-col lg:flex-row items-center content-center justify-between mb-8 md:mb-24 my-16 max-w-6xl mx-auto px-4 xl:px-0">
+            <div class="w-full lg:w-6/12">
+              <div class="rounded border border-gray-800">
+                <img src="/static/images/preview.png" />
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 lg:ml-16 px-2 md:px-0 ">
+              <h2 class="font-semibold text-2xl text-black md:leading-tight md:text-4xl mb-4">
+                A really great feature shoutout can go here
+              </h2>{' '}
+              <p class="text-gray-800 text-base md:text-lg mb-4 font-normal">
+                Pellentesque id sapien eu nulla rhoncus sagittis et a ex. Donec
+                sollicitudin convallis arcu nec feugiat. Curabitur pretium nisl
+                id tellus consequat, tristique bibendum elit mattis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+      <section className="py-14">
+        <div className="container">
+          <div class="flex flex-col lg:flex-row-reverse items-center content-center justify-between mb-8 md:mb-24 my-16 max-w-6xl mx-auto px-4 xl:px-0">
+            <div class="w-full lg:w-6/12">
+              <div class="rounded border border-gray-800">
+                <img src="/static/images/preview.png" />
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 lg:mr-16 px-2 md:px-0 ">
+              <h2 class="font-semibold text-2xl text-black md:leading-tight md:text-4xl mb-4">
+                A really great feature shoutout can go here
+              </h2>{' '}
+              <p class="text-gray-800 text-base md:text-lg mb-4 font-normal">
+                Pellentesque id sapien eu nulla rhoncus sagittis et a ex. Donec
+                sollicitudin convallis arcu nec feugiat. Curabitur pretium nisl
+                id tellus consequat, tristique bibendum elit mattis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+      <section className="py-10">
+        <PricingTable />
+      </section>
 
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+      <section className="py-14 my-13">
+        <div className="container">
+          <div className="flex">
+            <div className="w-4/12">
+              <h2 className="text-4xl font-bold">FAQ</h2>
+            </div>
+            <div className="w-8/12 px-6">
+              <div className="grid grid-cols-2 gap-8">
+                {FAQS.map((faq) => (
+                  <div key={faq.question}>
+                    <h3 className="font-bold">{faq.question}</h3>
+                    <p className>{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
 }
