@@ -31,7 +31,7 @@ const FAQS = [
 export default function Home() {
   return (
     <Layout>
-      <section className="py-6 md:pt-19 md:pb-12">
+      <section className="py-8 md:pt-19 md:pb-12">
         <div className="container">
           <div className="flex px-6 justify-center text-left md:text-center">
             <div className="w-12/12 lg:w-8/12">
@@ -110,7 +110,7 @@ export default function Home() {
         <div className="container">
           <div className="flex flex-col lg:flex-row items-center content-center justify-between mb-8 md:mb-24 mx-auto px-6 md:px-0">
             <div className="w-full lg:w-8/12 -ml-14">
-              <div className="rounded-r-full feature-screenshot feature-screenshot--one p-10">
+              <div className="rounded-r-full feature-screenshot feature-screenshot--one p-4 md:p-10">
                 <Fade top>
                   <img
                     src="/static/images/preview.png"
@@ -137,7 +137,7 @@ export default function Home() {
         <div className="container">
           <div className="flex flex-col lg:flex-row-reverse items-center content-center justify-between px-6 md:px-0 mb-8 md:mb-24">
             <div className="w-full lg:w-8/12 -mr-14">
-              <div className="rounded-l-full feature-screenshot feature-screenshot--two p-10">
+              <div className="rounded-l-full feature-screenshot feature-screenshot--two p-4 md:p-10">
                 <Fade top>
                   <img
                     src="/static/images/preview.png"
