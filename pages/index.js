@@ -35,18 +35,16 @@ export default function Home() {
         <div className="container">
           <div className="flex px-6 justify-center text-left md:text-center">
             <div className="w-12/12 lg:w-8/12">
-              <Flip bottom>
-                <span className="uppercase font-bold tracking-widest text-sm text-indigo-600">
-                  Spectrum
-                </span>
-                <h1 className="text-4xl md:text-5xl font-extrabold mt-4 leading-tight">
-                  Landing pages. Made simple.
-                </h1>
-                <p className="text-l lg:text-xl text-gray-700 mb-4 mt-2">
-                  A beautifully designed next.js template for your next project
-                </p>
-                <Button className="mt-5">Get started →</Button>
-              </Flip>
+              <span className="uppercase font-bold tracking-widest text-sm text-indigo-600">
+                Spectrum
+              </span>
+              <h1 className="text-4xl md:text-5xl font-extrabold mt-4 leading-tight">
+                Landing pages. Made simple.
+              </h1>
+              <p className="text-l lg:text-xl text-gray-700 mb-4 mt-2">
+                A beautifully designed next.js template for your next project
+              </p>
+              <Button className="mt-5">Get started →</Button>
             </div>
           </div>
         </div>
@@ -164,7 +162,7 @@ export default function Home() {
 
       <section className="py-10">
         <div className="container">
-          <div className="flex justify-center md:text-center px-8">
+          <div className="flex justify-center md:text-center px-8 mb-10">
             <div className="w-12/12">
               <h2 className="font-extrabold text-3xl md:text-5xl text-black md:text-5xl">
                 Pricing
