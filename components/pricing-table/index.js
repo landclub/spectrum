@@ -16,6 +16,7 @@ const PLANS = [
   {
     name: 'Pro',
     price: 14,
+    isMostPopular: true,
     features: [
       'High quality templates',
       'Hand-written HTML/CSS',
@@ -35,21 +36,43 @@ const PLANS = [
   },
 ];
 
+const Checkmark = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="mr-2"
+  >
+    <path d="M20 6L9 17l-5-5" />
+  </svg>
+);
+
 const Plan = ({plan}) => (
-  <div className="w-full md:w-1/3 p-8 py-8 md:mx-2 mb-8 md:mb-0 rounded text-black border border-gray-300">
-    <div className="text-center">
+  <div
+    className={`w-full md:w-1/3 p-8 py-8 md:mx-2 mb-8 md:mb-0 rounded text-black border border-gray-300 ${
+      plan.isMostPopular ? 'border-indigo-600' : ''
+    }`}
+  >
+    <>
       <h4 className="text-xl font-semibold mb-2">{plan.name}</h4>
-      <div className="relative flex justify-center content-start items-start">
+      <div className="relative flex content-start items-start">
         <span className="font-normal text-base text-2xl">$</span>
-        <span className="font-semibold text-6xl leading-none">
+        <span className="font-semibold text-5xl leading-none">
           {plan.price}
         </span>
       </div>
-    </div>
-    <div className=" md:px-6 mt-8">
-      <ul className="usps font-normal text-sm md:text-base">
+    </>
+    <div className="md:px-6 mt-8">
+      <ul className="font-normal text-sm md:text-base">
         {plan.features.map((feature) => (
-          <li key={feature}>{feature}</li>
+          <li className="flex items-center" key={feature}>
+            <Checkmark /> {feature}
+          </li>
         ))}
       </ul>
       <Button variant="primary" size="small" fullWidth className="mt-5">
@@ -61,10 +84,12 @@ const Plan = ({plan}) => (
 
 export default function PricingTable() {
   return (
-    <div className="flex flex-col md:flex-row max-w-6xl mx-auto mt-16 items-start justify-center">
-      {PLANS.map((plan) => (
-        <Plan plan={plan} key={plan.name} />
-      ))}
+    <div className="container">
+      <div className="flex flex-col md:flex-row mx-auto items-start justify-center px-8 md:px-10">
+        {PLANS.map((plan) => (
+          <Plan plan={plan} key={plan.name} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -22,23 +22,20 @@ body {
 }
 
 .screenshot {
-  position: relative;
-}
-
-.screenshot img {
-  border-radius: 5px;
-  position: relative;
-  z-index: 1;
-}
-
-.screenshot:before {
+  background: url('/static/images/hero-gradient.jpg') no-repeat center center / cover;
   width: 100%;
-  height: 110%;
-  position: absolute;
-  right: -50%;
-  top: -5%;
-  background: url(/static/images/hero-gradient.jpg) no-repeat center center / cover;
-  content: '';
-  border-radius: 5px;
-  z-index: 0;
+}
+
+.feature-screenshot {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.feature-screenshot--one {
+  background-image: url('/static/images/gradient-1.jpg');
+}
+
+.feature-screenshot--two {
+  background-image: url('/static/images/gradient-2.jpg');
 }

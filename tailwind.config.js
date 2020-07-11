@@ -6,8 +6,13 @@ module.exports = {
     },
     extend: {
       spacing: {
-        '13': '4rem',
-        '14': '5rem',
+        13: '4rem',
+        14: '5rem',
+        15: '6rem',
+        16: '7rem',
+        17: '8rem',
+        18: '9rem',
+        19: '10rem',
       },
     },
   },
