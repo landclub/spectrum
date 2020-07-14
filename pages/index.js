@@ -108,6 +108,56 @@ export default function Home() {
 
       <section className="py-5 lg:py-16">
         <div className="container">
+          <div className="flex flex-col lg:flex-row">
+            <div className="w-full lg:w-4/12 px-0 lg:px-6">
+              <img src="/static/images/icon-award.svg" width="32" height="32" />
+              <h3 className="font-bold text-xl mt-4">
+                Bring your ideas to life
+              </h3>
+              <p className="text-gray-700 mt-3">
+                From pixel-perfect icons and scalable vector graphics, to full
+                user flows and interactive prototypes, Sketch is the perfect
+                place to design, create, test and iterate.
+              </p>
+            </div>
+
+            <div className="w-full lg:w-4/12 px-0 lg:px-6">
+              <img
+                src="/static/images/icon-arrow-down-right.svg"
+                width="32"
+                height="32"
+              />
+              <h3 className="font-bold text-xl mt-4">
+                Bring your ideas to life
+              </h3>
+              <p className="text-gray-700 mt-3">
+                From pixel-perfect icons and scalable vector graphics, to full
+                user flows and interactive prototypes, Sketch is the perfect
+                place to design, create, test and iterate.
+              </p>
+            </div>
+
+            <div className="w-full lg:w-4/12 px-0 lg:px-6">
+              <img
+                src="/static/images/icon-chevrons-up.svg"
+                width="32"
+                height="32"
+              />
+              <h3 className="font-bold text-xl mt-4">
+                Bring your ideas to life
+              </h3>
+              <p className="text-gray-700 mt-3">
+                From pixel-perfect icons and scalable vector graphics, to full
+                user flows and interactive prototypes, Sketch is the perfect
+                place to design, create, test and iterate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-5 lg:py-16">
+        <div className="container">
           <div className="flex flex-col lg:flex-row items-center content-center justify-between mb-8 md:mb-24 mx-auto px-6 md:px-0">
             <div className="w-full lg:w-8/12 -ml-14">
               <div className="rounded-r-full feature-screenshot feature-screenshot--one p-4 md:p-10">
