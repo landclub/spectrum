@@ -31,7 +31,7 @@ const FAQS = [
 export default function Home() {
   return (
     <Layout>
-      <section className="py-8 md:pt-19 md:pb-12">
+      <section className="py-8 md:pt-16 md:pb-12">
         <div className="container">
           <div className="flex px-6 justify-center text-left md:text-center">
             <div className="w-12/12 lg:w-8/12">
@@ -110,10 +110,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-5 lg:py-16">
+      <section className="py-5 lg:py-16 px-6">
         <div className="container">
           <div className="flex flex-col lg:flex-row">
-            <div className="w-full lg:w-4/12 px-0 lg:px-6">
+            <div className="w-full lg:w-4/12 px-0 lg:px-6 mb-5 lg:mb-0">
               <img
                 src="/static/images/icon-award.svg"
                 width="32"
@@ -121,29 +121,27 @@ export default function Home() {
                 alt=""
               />
               <h3 className="font-bold text-xl mt-4">
-                Bring your ideas to life
+                Built with Tailwind CSS
               </h3>
               <p className="text-gray-700 mt-3">
-                From pixel-perfect icons and scalable vector graphics, to full
-                user flows and interactive prototypes, Sketch is the perfect
-                place to design, create, test and iterate.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident.
               </p>
             </div>
 
-            <div className="w-full lg:w-4/12 px-0 lg:px-6">
+            <div className="w-full lg:w-4/12 px-0 lg:px-6 mb-5 lg:mb-0">
               <img
                 src="/static/images/icon-arrow-down-right.svg"
                 width="32"
                 height="32"
                 alt=""
               />
-              <h3 className="font-bold text-xl mt-4">
-                Bring your ideas to life
-              </h3>
+              <h3 className="font-bold text-xl mt-4">Modular layout</h3>
               <p className="text-gray-700 mt-3">
-                From pixel-perfect icons and scalable vector graphics, to full
-                user flows and interactive prototypes, Sketch is the perfect
-                place to design, create, test and iterate.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident.
               </p>
             </div>
 
@@ -154,13 +152,11 @@ export default function Home() {
                 height="32"
                 alt=""
               />
-              <h3 className="font-bold text-xl mt-4">
-                Bring your ideas to life
-              </h3>
+              <h3 className="font-bold text-xl mt-4">Easy to customise</h3>
               <p className="text-gray-700 mt-3">
-                From pixel-perfect icons and scalable vector graphics, to full
-                user flows and interactive prototypes, Sketch is the perfect
-                place to design, create, test and iterate.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident.
               </p>
             </div>
           </div>
