@@ -1,6 +1,6 @@
 .button {
   cursor: pointer;
-  @apply rounded font-semibold rounded;
+  @apply rounded font-semibold;
 }
 
 .variant-primary {
