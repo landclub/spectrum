@@ -1,6 +1,8 @@
 # Spectrum - A free template from LandClub
 A free landing page template built with Next.js and Tailwind.
 
+![Screenshot of Spectrum template](/preview.jpg)
+
 ### Demo
 See a live demo of Spectrum [here](https://google.com)
 
