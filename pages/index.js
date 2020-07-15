@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import {Fade, Flip} from 'react-reveal';
+import React from 'react';
+import {Fade} from 'react-reveal';
 
 import Layout from '../components/layout';
 import PricingTable from '../components/pricing-table';
@@ -56,7 +56,11 @@ export default function Home() {
             <div className="w-11/12">
               <div className="screenshot rounded-l-full ml-18 py-8">
                 <Fade right>
-                  <img src="/static/images/preview.png" className="-ml-18" />
+                  <img
+                    src="/static/images/preview.png"
+                    className="-ml-18"
+                    alt="Preview of the app"
+                  />
                 </Fade>
               </div>
             </div>
@@ -110,7 +114,12 @@ export default function Home() {
         <div className="container">
           <div className="flex flex-col lg:flex-row">
             <div className="w-full lg:w-4/12 px-0 lg:px-6">
-              <img src="/static/images/icon-award.svg" width="32" height="32" />
+              <img
+                src="/static/images/icon-award.svg"
+                width="32"
+                height="32"
+                alt=""
+              />
               <h3 className="font-bold text-xl mt-4">
                 Bring your ideas to life
               </h3>
@@ -126,6 +135,7 @@ export default function Home() {
                 src="/static/images/icon-arrow-down-right.svg"
                 width="32"
                 height="32"
+                alt=""
               />
               <h3 className="font-bold text-xl mt-4">
                 Bring your ideas to life
@@ -142,6 +152,7 @@ export default function Home() {
                 src="/static/images/icon-chevrons-up.svg"
                 width="32"
                 height="32"
+                alt=""
               />
               <h3 className="font-bold text-xl mt-4">
                 Bring your ideas to life
@@ -165,6 +176,7 @@ export default function Home() {
                   <img
                     src="/static/images/preview.png"
                     className="shadow-2xl"
+                    alt="Screenshot of the app"
                   />
                 </Fade>
               </div>
@@ -192,6 +204,7 @@ export default function Home() {
                   <img
                     src="/static/images/preview.png"
                     className="shadow-2xl"
+                    alt="Screenshot of the app"
                   />
                 </Fade>
               </div>
@@ -214,7 +227,7 @@ export default function Home() {
         <div className="container">
           <div className="flex justify-center md:text-center px-8 mb-10">
             <div className="w-12/12">
-              <h2 className="font-extrabold text-3xl md:text-5xl text-black md:text-5xl">
+              <h2 className="font-extrabold text-3xl text-black md:text-5xl">
                 Pricing
               </h2>
               <p className="text-gray-700 text-base md:text-lg mb-4 font-normal">

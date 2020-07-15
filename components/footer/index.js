@@ -8,16 +8,16 @@ export default function Footer() {
           <span>Crafted by LandClub 2020</span>
         </div>
         <div className="w-1/1 md:w-6/12 text-center md:text-right">
-          <a href="#" className="text-md text-gray-700 mr-4">
+          <a href="/" className="text-md text-gray-700 mr-4">
             Twitter
           </a>
-          <a href="#" className="text-md text-gray-700 mr-4">
+          <a href="/" className="text-md text-gray-700 mr-4">
             Facebook
           </a>
-          <a href="#" className="text-md text-gray-700 mr-4">
+          <a href="/" className="text-md text-gray-700 mr-4">
             About
           </a>
-          <a href="#" className="text-md text-gray-700">
+          <a href="/" className="text-md text-gray-700">
             Support
           </a>
         </div>

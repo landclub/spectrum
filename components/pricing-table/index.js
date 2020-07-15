@@ -61,7 +61,7 @@ const Plan = ({plan}) => (
     <>
       <h4 className="text-xl font-semibold mb-2">{plan.name}</h4>
       <div className="relative flex content-start items-start">
-        <span className="font-normal text-base text-2xl">$</span>
+        <span className="font-normal text-2xl">$</span>
         <span className="font-semibold text-5xl leading-none">
           {plan.price}
         </span>
