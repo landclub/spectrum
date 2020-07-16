@@ -168,7 +168,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center content-center justify-between mb-8 md:mb-24 mx-auto px-6 md:px-0">
             <div className="w-full lg:w-8/12 -ml-14">
               <div className="rounded-r-full feature-screenshot feature-screenshot--one p-4 md:p-10">
-                <Fade top>
+                <Fade left>
                   <img
                     src="/static/images/preview.png"
                     className="shadow-2xl"
@@ -196,7 +196,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row-reverse items-center content-center justify-between px-6 md:px-0 mb-8 md:mb-24">
             <div className="w-full lg:w-8/12 -mr-14">
               <div className="rounded-l-full feature-screenshot feature-screenshot--two p-4 md:p-10">
-                <Fade top>
+                <Fade right>
                   <img
                     src="/static/images/preview.png"
                     className="shadow-2xl"
