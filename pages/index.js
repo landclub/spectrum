@@ -44,7 +44,7 @@ export default function Home() {
               <p className="text-l lg:text-xl text-gray-700 mb-4 mt-2">
                 A beautifully designed next.js template for your next project
               </p>
-              <Button className="mt-5">Get started →</Button>
+              <Button className="mt-5">Get started &nbsp;→</Button>
             </div>
           </div>
         </div>
@@ -267,7 +267,7 @@ export default function Home() {
                 project
               </p>
               <Button variant="primary" size="medium">
-                Get started →
+                Get started &nbsp;→
               </Button>
             </div>
           </div>
